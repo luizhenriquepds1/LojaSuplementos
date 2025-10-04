@@ -1,5 +1,5 @@
 
-/* Variáveis para a paleta de cores e efeitos - Adaptado para o modo escuro */
+
 :root {
     --cor-fundo-pagina: #1A1A1A;
     --cor-fundo-card: #3A3A3A;
@@ -12,7 +12,7 @@
     --sombra-hover: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
-/* Configurações globais */
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--cor-fundo-pagina);
@@ -32,7 +32,7 @@ header {
 }
 
 h1 {
-    font-size: clamp(2rem, 5vw, 3rem); /* Fonte fluída para telas menores */
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
     color: var(--cor-texto-principal);
     letter-spacing: -1px;
@@ -41,21 +41,21 @@ h1 {
 
 .container {
     display: flex;
-    flex-direction: column; /* Padrão para telas pequenas */
+    flex-direction: column; 
     gap: 30px;
     max-width: 1400px;
     margin: 0 auto;
-    flex: 1; /* Permite que o container se estenda para preencher o espaço vertical */
+    flex: 1; 
 }
 
-/* Estilo dos cards */
+
 .card {
     background-color: var(--cor-fundo-card);
-    padding: clamp(20px, 4vw, 40px); /* Padding fluído */
+    padding: clamp(20px, 4vw, 40px); 
     border-radius: 12px;
     box-shadow: var(--sombra-leve);
     transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-    display: flex; /* Adiciona flexbox para alinhamento interno */
+    display: flex; 
     flex-direction: column;
 }
 
@@ -65,7 +65,7 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(1.5rem, 3vw, 1.8rem); /* Fonte fluída */
+    font-size: clamp(1.5rem, 3vw, 1.8rem); 
     font-weight: 700;
     color: var(--cor-texto-principal);
     border-bottom: 4px solid var(--cor-destaque);
@@ -75,11 +75,11 @@ h2 {
     letter-spacing: 1px;
 }
 
-/* Estilo do formulário */
+
 #afiliado-form {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Espaçamento entre os grupos de input */
+    gap: 15px; 
 }
 
 .input-group {
@@ -127,7 +127,7 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    align-self: flex-start; /* Alinha o botão à esquerda dentro do formulário */
+    align-self: flex-start; 
     margin-top: 10px;
 }
 
@@ -137,7 +137,7 @@ h2 {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilo da tabela */
+
 .tabela-responsiva {
     overflow-x: auto;
 }
@@ -203,7 +203,7 @@ tr:hover {
     transform: scale(1.05);
 }
 
-/* Responsividade - Ajuste para telas grandes */
+
 @media (min-width: 992px) {
     .container {
         flex-direction: row;
