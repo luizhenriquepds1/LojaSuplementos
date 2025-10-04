@@ -7,20 +7,41 @@
     <title>tela de Login</title>
 </head>
 <body>
-    <div class="container">
-        <form class="login-box">
-            <h2>LOGIN</h2>
-            <div class="input-group">
-                <label for="usuario">Usúario</label>
-                <input type="text" id="usuario" placeholder="Digite seu usúario" required>
+    <div class="login-container">
+        <div class="login-form">
+            <h1>ENERGIA RENOVADA</h1>
+            <p>Acesse sua conta e eleve seu potencial.</p>
+            
+            <form>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                </div>
+
+                <div class="options">
+                    <a href="#" class="forgot-password">Esqueceu sua senha?</a>
+                </div>
+
+                <button type="submit" class="btn-login">ENTRAR</button>
+            </form>
+
+            <div class="signup-link">
+                <p>Não tem uma conta? <a href="#">Cadastre-se agora</a></p>
             </div>
-            <div class="input-group">
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" placeholder="Digite sua senha" required>
+        </div>
+
+        <div class="login-art">
+            <div class="overlay"></div>
+            <div class="art-content">
+                <h2>VITAL RECIFE</h2>
+                <p>SUPLEMENTOS</p>
             </div>
-            <button type="submit">Entrar</button>
-            <a href="#telaCadrasto.html">Cadrastro</a>
-        </form>
+        </div>
     </div>
 </body>
 </html>

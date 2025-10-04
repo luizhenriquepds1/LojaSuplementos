@@ -1,0 +1,120 @@
+:root {
+    --cor-fundo-escuro: #121212;
+    --cor-container: #1E1E1E;
+    --cor-input: #2D2D2D;
+    --cor-borda: #444444;
+    --verde-vital: #D4E86E;
+    --texto-primario: #FFFFFF;
+    --texto-secundario: #A0A0A0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo-escuro);
+    color: var(--texto-primario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--cor-container);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.form-container h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--texto-primario);
+    text-align: center;
+}
+
+.form-container p {
+    color: var(--texto-secundario);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--texto-secundario);
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 15px;
+    background-color: var(--cor-input);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    color: var(--texto-primario);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input::placeholder {
+    color: #6c6c6c;
+}
+
+.input-group input:focus {
+    border-color: var(--verde-vital);
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--verde-vital);
+    color: var(--cor-fundo-escuro);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(212, 232, 110, 0.3);
+}
+
+.login-redirect {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.9rem;
+}
+
+.login-redirect p {
+    color: var(--texto-secundario);
+}
+
+.login-redirect a {
+    color: var(--verde-vital);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-redirect a:hover {
+    text-decoration: underline;
+}
