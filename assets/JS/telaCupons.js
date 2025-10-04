@@ -52,7 +52,7 @@ class CupomService {
     }
 
     async sincronizarDados() {
-        // Simulação de salvar no arquivo JSON.
+        
         console.log('Dados de cupons atualizados:', JSON.stringify(this.cupons, null, 2));
     }
 }

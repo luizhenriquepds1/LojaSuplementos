@@ -1,0 +1,142 @@
+:root {
+  --cor-fundo-pagina: #1A1A1A;
+  --cor-fundo-card: #3A3A3A;
+  --cor-texto-principal: #FFFFFF;
+  --cor-texto-secundario: #A0AEC0;
+  --cor-destaque: #D4E86E;
+  --cor-destaque-hover: #b8d052;
+  --cor-botoes-excluir: #ff6347;
+  --sombra-leve: 0 4px 15px rgba(0, 0, 0, 0.4);
+  --sombra-hover: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--cor-fundo-pagina);
+  color: var(--cor-texto-principal);
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+
+.sidebar {
+  width: 250px;
+  background: var(--cor-fundo-card);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--sombra-leve);
+}
+
+.sidebar .perfil {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar img {
+  border-radius: 50%;
+  border: 2px solid var(--cor-destaque);
+}
+
+.sidebar h2 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 10px;
+  margin: 5px 0;
+  color: var(--cor-texto-secundario);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.sidebar nav a:hover {
+  background: var(--cor-destaque-hover);
+  color: var(--cor-fundo-pagina);
+}
+
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+
+.card {
+  background: var(--cor-fundo-card);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: var(--sombra-leve);
+}
+
+
+.mapa #map {
+  height: 300px;
+  border-radius: 12px;
+}
+
+
+.historico #listaAfiliados .afiliado {
+  padding: 10px;
+  border-bottom: 1px solid var(--cor-texto-secundario);
+}
+.historico #listaAfiliados .afiliado:last-child {
+  border-bottom: none;
+}
+
+
+.graficos canvas {
+  margin-top: 15px;
+  width: 100% !important;
+  height: 200px !important;
+}
+
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    width: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .sidebar nav a {
+    padding: 8px;
+    margin: 0 5px;
+  }
+}

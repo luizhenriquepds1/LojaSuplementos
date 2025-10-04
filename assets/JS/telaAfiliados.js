@@ -24,17 +24,17 @@ class AfiliadoService {
             this.afiliados = await response.json();
         } catch (error) {
             console.error(error);
-            this.afiliados = []; // Se falhar, inicializa como array vazio
+            this.afiliados = []; 
         }
     }
 
     async salvarAfiliado(afiliado) {
         if (!afiliado.id) {
-            // Novo afiliado
+            
             afiliado.id = this.afiliados.length > 0 ? Math.max(...this.afiliados.map(a => a.id)) + 1 : 1;
             this.afiliados.push(afiliado);
         } else {
-            // Edição
+            
             const index = this.afiliados.findIndex(a => a.id === afiliado.id);
             if (index !== -1) {
                 this.afiliados[index] = afiliado;
@@ -49,11 +49,7 @@ class AfiliadoService {
     }
 
     async sincronizarDados() {
-        // Simulação de salvar no arquivo JSON.
-        // Em um ambiente real, você faria uma requisição POST/PUT para um backend.
-        // Por ser um projeto local, simulamos a atualização.
-        // O código abaixo não salva no arquivo físico, pois JS do navegador não tem acesso ao sistema de arquivos.
-        // Ele apenas atualiza o estado interno da aplicação.
+        
         console.log('Dados atualizados:', JSON.stringify(this.afiliados, null, 2));
     }
 }

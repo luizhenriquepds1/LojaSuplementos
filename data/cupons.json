@@ -4,7 +4,7 @@
     "codigo": "DESCONTO10",
     "desconto": 10,
     "afiliadoId": null,
-    "afiliadoNome": ""
+    "afiliadoNome": "Beatriz Santos"
   },
   {
     "id": 2,
@@ -12,5 +12,20 @@
     "desconto": 20,
     "afiliadoId": null,
     "afiliadoNome": ""
+  },
+  {
+    "id": 3,
+    "codigo": "PROMO15",
+    "desconto": 15,
+    "afiliadoId": null,
+    "afiliadoNome": ""
+  },
+  {
+    "id": 4,
+    "codigo": "CUPOM25",
+    "desconto": 25,
+    "afiliadoId": null,
+    "afiliadoNome": ""
   }
+ 
 ]

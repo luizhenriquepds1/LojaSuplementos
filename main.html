@@ -1,11 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Administrativo - Afiliados</title>
+  <link rel="stylesheet" href="assets/CSS/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    
+  <div class="container">
+    <aside class="sidebar">
+      <div class="perfil">
+        <img src="https://via.placeholder.com/60" alt="Perfil">
+        <h2>Admin</h2>
+      </div>
+      <nav>
+        <a href="#">Comissões e Pagamentos</a>
+        <a href="#">Relatórios</a>
+        <a href="telaAfiliados.html">Afiliados</a>
+        <a href="telaCupons.html">Gerar Cupons</a>
+      </nav>
+    </aside>
+    <main class="content">
+      <header>
+        <h1>Painel de Afiliados</h1>
+        <span id="valorTotal">Valor total mensal: R$ 0,00</span>
+      </header>
+
+      <section class="grid">
+        <div class="card mapa">
+          <h3>Mapa de Localização dos Afiliados</h3>
+          <div id="map"></div>
+        </div>
+        <div class="card historico">
+          <h3>Histórico de Afiliados</h3>
+          <div id="listaAfiliados"></div>
+        </div>
+        <div class="card graficos">
+          <h3>Gráfico de Desempenho</h3>
+          <canvas id="graficoBarra"></canvas>
+          <canvas id="graficoLinha"></canvas>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="assets/JS/main.js"></script>
 </body>
 </html>

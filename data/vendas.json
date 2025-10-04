@@ -1,0 +1,6 @@
+[
+  { "id": 1, "data": "2025-08-01", "valor": 120.00, "produto": "Curso de Marketing Digital" },
+  { "id": 2, "data": "2025-08-05", "valor": 85.50, "produto": "Ebook de Receitas" },
+  { "id": 3, "data": "2025-08-10", "valor": 120.00, "produto": "Curso de Marketing Digital" }
+ 
+]
