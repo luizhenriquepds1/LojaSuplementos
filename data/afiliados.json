@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "nome": "João da Silva",
+    "telefone": "11987654321",
+    "email": "joao@email.com",
+    "produto": "Curso de Marketing Digital",
+    "comissao": 15
+  },
+  {
+    "id": 2,
+    "nome": "Maria Souza",
+    "telefone": "21991234567",
+    "email": "maria@email.com",
+    "produto": "Ebook de Receitas",
+    "comissao": 10
+  }
+]

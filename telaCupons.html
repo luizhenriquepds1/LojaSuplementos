@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Cupons</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/CSS/telaCupons.css">
+</head>
+<body>
+
+    <header>
+        <h1>Gerenciamento de Cupons</h1>
+    </header>
+
+    <main class="container">
+        <section class="formulario-card card">
+            <h2>Criar Cupom</h2>
+            <form id="cupom-form">
+                <div class="input-group">
+                    <label for="codigo">Código do Cupom:</label>
+                    <input type="text" id="codigo" required>
+                </div>
+                <div class="input-group">
+                    <label for="desconto">Desconto (%):</label>
+                    <input type="number" id="desconto" required>
+                </div>
+                <button type="submit" class="botao-principal">Criar Cupom</button>
+            </form>
+        </section>
+
+        <section class="distribuicao-card card">
+            <h2>Distribuir Cupons</h2>
+            <div class="input-group">
+                <label for="select-cupom">Selecionar Cupom:</label>
+                <select id="select-cupom"></select>
+            </div>
+            <div class="input-group">
+                <label for="select-afiliado">Selecionar Afiliado:</label>
+                <select id="select-afiliado"></select>
+            </div>
+            <button id="btn-distribuir" class="botao-principal">Distribuir Cupom</button>
+        </section>
+        
+        <section class="cupons-card card">
+            <h2>Cupons Criados</h2>
+            <div class="tabela-responsiva">
+                <table id="tabela-cupons">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Código</th>
+                            <th>Desconto</th>
+                            <th>Distribuído para</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/JS/telaCupons.js"></script>
+</body>
+</html>

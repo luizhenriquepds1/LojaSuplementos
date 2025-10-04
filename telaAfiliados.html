@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Afiliados</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/CSS/telaAfiliados.css">
+</head>
+<body>
+
+    <header>
+        <h1>Gerenciamento de Afiliados</h1>
+    </header>
+
+    <main class="container">
+        <section class="formulario-card card">
+            <h2>Cadastrar/Editar Afiliado</h2>
+            <form id="afiliado-form">
+                <input type="hidden" id="afiliado-id">
+                
+                <div class="input-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="produto">Produto:</label>
+                    <input type="text" id="produto" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="comissao">Comissão (%):</label>
+                    <input type="number" id="comissao" required>
+                </div>
+
+                <button type="submit" class="botao-principal">Salvar Afiliado</button>
+            </form>
+        </section>
+
+        <section class="tabela-card card">
+            <h2>Lista de Afiliados</h2>
+            <div class="tabela-responsiva">
+                <table id="tabela-afiliados">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Telefone</th>
+                            <th>Email</th>
+                            <th>Produto</th>
+                            <th>Comissão</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/JS/telaAfiliados.js"></script>
+</body>
+</html>
