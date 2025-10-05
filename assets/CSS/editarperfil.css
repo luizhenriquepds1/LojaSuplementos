@@ -1,0 +1,150 @@
+:root {
+    --cor-fundo-escuro: #121212;
+    --cor-container: #1E1E1E;
+    --cor-input: #2D2D2D;
+    --cor-borda: #444444;
+    --verde-vital: #D4E86E;
+    --texto-primario: #FFFFFF;
+    --texto-secundario: #A0A0A0;
+}
+
+body {
+    background-color: var(--cor-fundo-escuro);
+    color: var(--texto-primario);
+    font-family: 'Poppins', sans-serif; 
+}
+
+header {
+    gap: 750px;
+    align-items: center;
+    display: flex;
+    padding: 5px 20px;
+}
+
+header button{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--verde-vital);
+    color: var(--cor-fundo-escuro);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 10px;
+}
+
+
+.container-perfil {
+    width: 100%;
+    max-width: 650px;
+    margin: 5px auto;
+    padding: 20px;
+}
+
+.card-perfil {
+    background-color: var(--cor-container);
+    border-radius: 16px;
+    padding: 35px 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card-perfil h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--cor-borda);
+    text-align: center;
+}
+
+.perfil-foto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+#foto-preview {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--cor-borda);
+    margin-bottom: 15px;
+    background-color: var(--cor-input);
+}
+
+.botao-alterar-foto {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    background-color: var(--cor-input);
+    color: var(--texto-secundario);
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botao-alterar-foto:hover {
+    color: var(--verde-vital);
+    border-color: var(--verde-vital);
+}
+
+.botao-alterar-foto i {
+    margin-right: 8px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--texto-secundario);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 95%;
+    padding: 14px 15px;
+    background-color: var(--cor-input);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    color: var(--texto-primario);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: var(--verde-vital);
+    box-shadow: 0 0 0 3px rgba(212, 232, 110, 0.2);
+}
+
+.botao-principal {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--verde-vital);
+    color: var(--cor-fundo-escuro);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 15px;
+}
+
+.botao-principal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(212, 232, 110, 0.3);
+}

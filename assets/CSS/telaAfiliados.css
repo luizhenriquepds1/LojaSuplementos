@@ -21,8 +21,25 @@ body {
 }
 
 header {
-    text-align: center;
+    gap: 575px;
+    align-items: center;
+    display: flex;
     padding: 40px 20px;
+}
+
+header button{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--verde-vital);
+    color: var(--cor-fundo-escuro);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 10px;
 }
 
 header h1 {
@@ -183,16 +200,4 @@ header h1 {
 
 .btn-excluir:hover {
     background-color: #c53030;
-}
-
-@media (max-width: 900px) {
-    .container {
-        flex-direction: column;
-    }
-    .formulario-card {
-        max-width: 100%;
-    }
-    header h1 {
-        font-size: 2rem;
-    }
 }

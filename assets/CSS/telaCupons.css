@@ -21,7 +21,9 @@ body {
 }
 
 header {
-    text-align: center;
+    gap: 575px;
+    align-items: center;
+    display: flex;
     padding: 40px 20px;
 }
 
@@ -29,6 +31,21 @@ header h1 {
     font-size: 2.5rem;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+header button{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--verde-vital);
+    color: var(--cor-fundo-escuro);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 10px;
 }
 
 .container {
@@ -159,20 +176,4 @@ header h1 {
 
 #tabela-cupons tbody tr:last-child {
     border-bottom: none;
-}
-
-@media (max-width: 768px) {
-    .container {
-        grid-template-columns: 1fr;
-    }
-
-    .formulario-card,
-    .distribuicao-card,
-    .cupons-card {
-        grid-column: 1 / 2;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
 }
