@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "nome": "TechStore Recife",
+    "filial": "01",
+    "endereco": "Av. Boa Viagem, 5000 - Recife, PE",
+    "tipo_servico": "Eletrônicos e Informática",
+    "responsavel": "Carlos Souza",
+    "contato": "81988887777"
+    
+  },
+  {
+    "id": 2,
+    "nome": "Beleza Pura",
+    "filial": "02",
+    "endereco": "Rua das Flores, 123 - Olinda, PE",
+    "tipo_servico": "Estética e Cosméticos",
+    "responsavel": "Maria Clara",
+    "contato": "81999998888"
+    
+  },
+  {
+    "id": 3,
+    "nome": "PowerGym Recife",
+    "filial": "01",
+    "endereco": "Rua do Sol, 845 - Boa Vista, Recife, PE",
+    "tipo_servico": "Academia e Treinamentos Funcionais",
+    "responsavel": "Ricardo Lima",
+    "contato": "81985441122"
+  },
+  {
+    "id": 4,
+    "nome": "Muscle House",
+    "filial": "01",
+    "endereco": "Av. Norte, 2333 - Casa Amarela, Recife, PE",
+    "tipo_servico": "Loja de Suplementos e Acessórios",
+    "responsavel": "Fernando Paiva",
+    "contato": "81997653321"
+  },
+  {
+    "id": 5,
+    "nome": "Corpo em Forma",
+    "filial": "02",
+    "endereco": "Rua José de Alencar, 210 - Paulista, PE",
+    "tipo_servico": "Academia e Personal Trainers",
+    "responsavel": "Tatiane Moura",
+    "contato": "81998125544"
+  },
+  {
+    "id": 6,
+    "nome": "VitaFit Suplementos",
+    "filial": "01",
+    "endereco": "Av. Domingos Ferreira, 2990 - Boa Viagem, Recife, PE",
+    "tipo_servico": "Venda de Suplementos e Vitaminas",
+    "responsavel": "João Victor",
+    "contato": "81999556677"
+  },
+  {
+    "id": 7,
+    "nome": "Top Shape Academia",
+    "filial": "03",
+    "endereco": "Rua da Aurora, 322 - Santo Amaro, Recife, PE",
+    "tipo_servico": "Musculação e Treinos Personalizados",
+    "responsavel": "Paulo Henrique",
+    "contato": "81987776655"
+  },
+  {
+    "id": 8,
+    "nome": "NutriMax Store",
+    "filial": "01",
+    "endereco": "Av. Conselheiro Aguiar, 2155 - Recife, PE",
+    "tipo_servico": "Loja de Suplementos e Produtos Naturais",
+    "responsavel": "Camila Duarte",
+    "contato": "81999001234"
+    
+  },
+  {
+    "id": 9,
+    "nome": "StrongLife Fitness",
+    "filial": "01",
+    "endereco": "Rua Capitão Lima, 122 - Santo Antônio, Recife, PE",
+    "tipo_servico": "Academia, Crossfit e Treinamento Funcional",
+    "responsavel": "Rafaela Torres",
+    "contato": "81998887722"
+    
+  },
+  {
+    "id": 10,
+    "nome": "BioForce Nutrition",
+    "filial": "01",
+    "endereco": "Av. Rosa e Silva, 1980 - Aflitos, Recife, PE",
+    "tipo_servico": "Suplementos Esportivos e Produtos Saudáveis",
+    "responsavel": "Anderson Melo",
+    "contato": "81997114433"
+    
+  }
+]
+
