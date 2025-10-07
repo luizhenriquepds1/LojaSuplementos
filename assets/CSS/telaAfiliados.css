@@ -195,7 +195,6 @@ header h1 {
 
 .btn-excluir {
     background-color: #e53e3e;
-    color: var(--texto-primario);
 }
 
 .btn-excluir:hover {
