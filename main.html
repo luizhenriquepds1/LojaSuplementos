@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="assets/CSS/main.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.7/dist/htmx.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.7/dist/htmx.min.js"></script>
 </head>
 <body>
   <div class="container">
@@ -16,18 +16,44 @@
         <img src="/assets/img/Screenshot_2025-10-05-19-13-47-75_1c337646f29875672b5a61192b9010f9.jpg" alt="Perfil">
         <h2>Administrador</h2>
       </div>
+
       <nav>
-        <a href="pagamento.html">Comissões e Pagamentos</a>
-        <a href="telaAfiliados.html">Afiliados</a>
-        <a href="telaCupons.html">Gerar Cupons</a>
-        <a href="lojas.html">Lojas Afiliadas</a>
-        <a href="editarperfil.html">Editar Perfil</a>
+        <a href="pagamento.html"
+           hx-get="pagamento.html"
+           hx-target="#conteudo"
+           hx-swap="innerHTML">Comissões e Pagamentos</a>
+
+        <a href="telaAfiliados.html"
+           hx-get="telaAfiliados.html"
+           hx-target="#conteudo"
+           hx-swap="innerHTML">Afiliados</a>
+
+        <a href="telaCupons.html"
+           hx-get="telaCupons.html"
+           hx-target="#conteudo"
+           hx-swap="innerHTML">Gerar Cupons</a>
+
+        <a href="lojas.html"
+           hx-get="lojas.html"
+           hx-target="#conteudo"
+           hx-swap="innerHTML">Lojas Afiliadas</a>
+
+        <a href="editarperfil.html"
+           hx-get="editarperfil.html"
+           hx-target="#conteudo"
+           hx-swap="innerHTML">Editar Perfil</a>
       </nav>
     </aside>
-    <main class="content">
+
+    <main class="content" id="conteudo">
       <header>
         <h1>Painel de Afiliados</h1>
-        <span id="valorTotal">Valor total mensal: R$ 0,00</span>
+        <span id="valorTotal"
+              hx-get="/api/valorTotal"
+              hx-trigger="load, every 30s"
+              hx-swap="outerHTML">
+          Valor total mensal: R$ 0,00
+        </span>
       </header>
 
       <section class="grid">
@@ -35,10 +61,17 @@
           <h3>Mapa de Localização dos Afiliados</h3>
           <div id="map"></div>
         </div>
+
         <div class="card historico">
           <h3>Histórico de Afiliados</h3>
-          <div id="listaAfiliados"></div>
+          <div id="listaAfiliados"
+               hx-get="/api/afiliados"
+               hx-trigger="load, every 60s"
+               hx-swap="innerHTML">
+            Carregando afiliados...
+          </div>
         </div>
+
         <div class="card graficos">
           <h3>Gráfico de Desempenho</h3>
           <canvas id="graficoBarra"></canvas>
@@ -48,7 +81,6 @@
     </main>
   </div>
 
-  
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="assets/JS/main.js"></script>
 </body>

@@ -1,93 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lojas Afiliadas</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
- 
-    <link rel="stylesheet" href="assets/CSS/lojas.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lojas Afiliadas (HTMX)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/CSS/lojas.css">
+  <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.7"></script>
 </head>
+
 <body>
- 
-    <header class="main-header">
-      <a href="main.html">
-        <button>< VOLTAR</button>
-      </a>
-      <h1>Gerenciamento de Lojas</h1>
-    </header>
- 
-    <main class="container">
-        <section class="formulario-card card">
-            <h2>Cadastrar / Editar Loja</h2>
-            <form id="formLoja">
-                <input type="hidden" id="lojaId">
-                
-                <div class="input-group">
-                    <label for="nomeLoja">Nome da Loja:</label>
-                    <input type="text" id="nomeLoja" required>
-                </div>
-                <div class="input-group">
-                    <label for="filial">Número da Filial:</label>
-                    <input type="text" id="filial" required>
-                </div>
-                <div class="input-group">
-                    <label for="endereco">Endereço:</label>
-                    <input type="text" id="endereco" required>
-                </div>
-                <div class="input-group">
-                    <label for="servicos">Tipo de Serviços:</label>
-                    <input type="text" id="servicos" required>
-                </div>
-                <div class="input-group">
-                    <label for="responsavel">Responsável:</label>
-                    <input type="text" id="responsavel" required>
-                </div>
-                <div class="input-group">
-                    <label for="contato">Número de Contato:</label>
-                    <input type="text" id="contato" required>
-                </div>
- 
-                <button type="submit" class="botao-principal">Salvar Loja</button>
-            </form>
-        </section>
- 
-        <section class="tabela-card card">
-            <h2>Lojas Cadastradas</h2>
-            <div class="tabela-responsiva">
-                <table id="tabelaLojas">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nome da Loja</th>
-                            <th>Filial</th>
-                            <th>Responsável</th>
-                            <th>Contato</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Loja Exemplo</td>
-                            <td>001</td>
-                            <td>João Silva</td>
-                            <td>(11) 99999-8888</td>
-                            <td class="acoes">
-                                <button class="btn-editar">EDITAR</button>
-                                <button class="btn-excluir">EXCLUIR</button>
-                            </td>
-                        </tr>
-                        </tbody>
-                </table>
-            </div>
-        </section>
-    </main>
- 
-    <script src="assets/JS/lojas.js"></script>
+
+  <header class="main-header">
+    <button hx-get="main.html" hx-target="body" hx-swap="innerHTML">&lt; VOLTAR</button>
+    <h1>Gerenciamento de Lojas</h1>
+  </header>
+
+  <main class="container">
+
+    <section class="formulario-card card">
+      <h2>Cadastrar / Editar Loja</h2>
+
+      <form 
+        id="formLoja"
+        hx-post="/api/lojas"
+        hx-target="#tabelaLojasBody"
+        hx-swap="innerHTML"
+        hx-on::after-request="this.reset()"
+      >
+        <input type="hidden" id="lojaId" name="id">
+
+        <div class="input-group">
+          <label for="nomeLoja">Nome da Loja:</label>
+          <input type="text" id="nomeLoja" name="nome" required>
+        </div>
+
+        <div class="input-group">
+          <label for="filial">Número da Filial:</label>
+          <input type="text" id="filial" name="filial" required>
+        </div>
+
+        <div class="input-group">
+          <label for="endereco">Endereço:</label>
+          <input type="text" id="endereco" name="endereco" required>
+        </div>
+
+        <div class="input-group">
+          <label for="servicos">Tipo de Serviços:</label>
+          <input type="text" id="servicos" name="servicos" required>
+        </div>
+
+        <div class="input-group">
+          <label for="responsavel">Responsável:</label>
+          <input type="text" id="responsavel" name="responsavel" required>
+        </div>
+
+        <div class="input-group">
+          <label for="contato">Número de Contato:</label>
+          <input type="text" id="contato" name="contato" required>
+        </div>
+
+        <button type="submit" class="botao-principal">Salvar Loja</button>
+      </form>
+    </section>
+
+    <section class="tabela-card card">
+      <h2>Lojas Cadastradas</h2>
+
+      <div class="tabela-responsiva">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome da Loja</th>
+              <th>Filial</th>
+              <th>Responsável</th>
+              <th>Contato</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+
+          <tbody 
+            id="tabelaLojasBody"
+            hx-get="/api/lojas"
+            hx-trigger="load, every 20s"
+            hx-swap="innerHTML"
+          >
+            <tr><td colspan="6" style="text-align:center;">Carregando...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
 </body>
 </html>

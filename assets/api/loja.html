@@ -1,0 +1,20 @@
+<tr>
+  <td>1</td>
+  <td>TechStore Recife</td>
+  <td>001</td>
+  <td>Carlos Souza</td>
+  <td>(81) 98888-7777</td>
+  <td class="acoes">
+    <button 
+      hx-get="/api/lojas/1/edit"
+      hx-target="#formLoja"
+      hx-swap="outerHTML"
+      class="btn-editar">EDITAR</button>
+
+    <button 
+      hx-delete="/api/lojas/1"
+      hx-target="#tabelaLojasBody"
+      hx-swap="innerHTML"
+      class="btn-excluir">EXCLUIR</button>
+  </td>
+</tr>
